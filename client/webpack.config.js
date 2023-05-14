@@ -22,7 +22,7 @@ module.exports = () => {
       }),
       // Inject Manifest and configuring service worker
       new InjectManifest({
-        swSrc: './src/sw.js',
+        swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
       // WebpackPwaManifest
@@ -58,7 +58,6 @@ module.exports = () => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
-              plugins: ['@babel/plugin-proposal-object-rest-and-spread', '@babel/transform-runtime'],
             },
           },
         },
