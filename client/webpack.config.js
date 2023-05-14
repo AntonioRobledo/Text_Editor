@@ -15,7 +15,7 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // Configured wokrbox plugins
+      // Configured workbox plugins
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'Text Editor'
@@ -25,15 +25,17 @@ module.exports = () => {
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
-      // WebpackPwaManifest
+      // Creates the manifest.json 
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E',
         description: 'A place to store your notes',
-        start_url: './',
-        publicPath: './',
+        background_color: "#225ca3",
+        theme_color: "#225ca3",
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -58,6 +60,7 @@ module.exports = () => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
             },
           },
         },
