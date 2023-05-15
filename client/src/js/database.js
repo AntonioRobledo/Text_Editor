@@ -12,7 +12,6 @@ const initdb = async () =>
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
 
   // Create a connection to the database and version we want to use
@@ -31,7 +30,6 @@ export const putDb = async (content) => {
   console.log('🚀 - data saved to the indexedDB', result);
 };
 
-// TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
 
   // Create a connection to the database and version we want to use
