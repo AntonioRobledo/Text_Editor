@@ -11,6 +11,10 @@
     "install": "cd server && npm i && cd ../client && npm i",
     "client": "cd client && npm start"
   },
+  "engines": {
+    "node": "14.18.3",
+    "npm": "6.14.15"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,6 +24,7 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
+    "webpack": "^5.82.1",
     "nodemon": "^2.0.4"
   }
 }
