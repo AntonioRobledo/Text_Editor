@@ -2,7 +2,7 @@
   "name": "text-editor",
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack --mode production",
+    "build": "npm install -D webpack-cli && webpack --mode production",
     "start": "webpack --watch"
   },
   "author": "2U",
